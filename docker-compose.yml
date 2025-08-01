@@ -4,10 +4,10 @@ services:
     container_name: xibo-db
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: Gmsb@161122.a
+      MYSQL_ROOT_PASSWORD: P@ssw0rd123
       MYSQL_DATABASE: xibo
       MYSQL_USER: xibouser
-      MYSQL_PASSWORD: Gmsb@161122.a
+      MYSQL_PASSWORD: P@ssw0rd123
     networks:
       - xibo-net
 
