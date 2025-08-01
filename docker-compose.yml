@@ -1,0 +1,29 @@
+services:
+  xibo-db:
+    image: mysql:5.5
+    container_name: xibo-db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: Gmsb@161122.a
+      MYSQL_DATABASE: xibo
+      MYSQL_USER: xibouser
+      MYSQL_PASSWORD: Gmsb@161122.a
+    networks:
+      - xibo-net
+
+  xibo:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: xibo
+    restart: always
+    ports:
+      - "8082:80"
+    depends_on:
+      - xibo-db
+    networks:
+      - xibo-net
+
+networks:
+  xibo-net:
+    driver: bridge
