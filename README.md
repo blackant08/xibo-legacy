@@ -70,7 +70,7 @@ sudo firewall-cmd --reload
 | DB User          | `xibouser`             |
 | DB Password      | `P@ssw0rd123`          |
 | DB Host          | `xibo-db`              |
-| Library Location | '/var/www/xibo-library'|
+| Library Location | `/var/www/xibo-library`|
 
 ---
 
